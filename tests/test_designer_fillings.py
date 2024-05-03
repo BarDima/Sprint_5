@@ -1,0 +1,15 @@
+from locators import StellaLocator
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.by import By
+
+class TestStellaFillings:
+    def test_fillings_clic(self, driver):
+        driver.find_element(*StellaLocator.BUTTON_ENTRANCE_TO_ACCOUNT).click()
+        driver.find_element(*StellaLocator.EMAIL_FIELD).send_keys('qwer@qw.ru')
+        driver.find_element(*StellaLocator.PASSWORD_FIELD).send_keys('123456')
+        driver.find_element(*StellaLocator.BUTTON_ENTRANCE).click()
+        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((By.XPATH, "*//button[text()='Оформить заказ']")))
+        driver.find_element(*StellaLocator.FILLINGS_BUTTON).click()
+        fillings_section = driver.find_element(*StellaLocator.SECTION_FILLINGS)
+        assert fillings_section
