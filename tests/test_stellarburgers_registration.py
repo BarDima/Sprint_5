@@ -11,7 +11,7 @@ class TestStellaRegistration:
         driver.find_element(*StellaLocator.EMAIL_FIELD).send_keys('123@ya.ru')
         driver.find_element(*StellaLocator.PASSWORD_FIELD).send_keys('123456')
         driver.find_element(*StellaLocator.BUTTON_REGISTER).click()
-        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((By.XPATH, "*//a[@href='/account']")))
+        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((StellaLocator.PERSONAL_ACCOUNT)))
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/register'
 
 

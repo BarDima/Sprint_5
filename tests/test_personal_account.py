@@ -10,6 +10,6 @@ class TestStellaPersonalAccount:
         driver.find_element(*StellaLocator.PASSWORD_FIELD).send_keys('123456')
         driver.find_element(*StellaLocator.BUTTON_ENTRANCE).click()
         driver.find_element(*StellaLocator.PERSONAL_ACCOUNT).click()
-        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((By.XPATH, "*//a[@href='/account/profile']")))
+        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((StellaLocator.PROFILE_BUTTON)))
         expected_url = 'https://stellarburgers.nomoreparties.site/account/profile'
         assert driver.current_url == expected_url

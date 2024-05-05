@@ -9,5 +9,5 @@ class TestStellaIncorrectPassword:
         driver.find_element(*StellaLocator.EMAIL_FIELD).send_keys('123@ya.ru')
         driver.find_element(*StellaLocator.PASSWORD_FIELD).send_keys('12345')
         driver.find_element(*StellaLocator.BUTTON_REGISTER).click()
-        error_message = driver.find_element(By.XPATH, "//*[@id='root']/div/main/div/form/fieldset[3]/div/div")
+        error_message = driver.find_element(*StellaLocator.INCORRECT_PASSWORD)
         assert error_message

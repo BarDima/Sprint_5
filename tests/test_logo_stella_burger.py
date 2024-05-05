@@ -11,6 +11,6 @@ class TestLogoStellaBurger:
         driver.find_element(*StellaLocator.BUTTON_ENTRANCE).click()
         driver.find_element(*StellaLocator.PERSONAL_ACCOUNT).click()
         driver.find_element(*StellaLocator.STELLA_BURGER_LOGO).click()
-        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((By.XPATH, "*//h1[text()='Соберите бургер']")))
+        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((StellaLocator.MAKE_BURGER)))
         expected_url = 'https://stellarburgers.nomoreparties.site/'
         assert driver.current_url == expected_url

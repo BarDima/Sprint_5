@@ -6,7 +6,6 @@ class StellaLocator:
     EMAIL_FIELD = (By.XPATH, "*//input[@name = 'name']") #поле Email
     PASSWORD_FIELD = (By.XPATH, "*//input[@name='Пароль']")#поле пароль
     BUTTON_REGISTER = (By.XPATH, "*//button[text()='Зарегистрироваться']")#кнопка зпрегистрироваться
-    INVALID_PASSWORD = (By.XPATH, "//*[@id='root']/div/main/div/form/fieldset[3]/div/div")#ошибка некорректный ввод пароля
     TEXT_LOGIN_BUTTON = (By.XPATH, "*//a[@href='/login']")#текст войти
     BUTTON_ENTRANCE = (By.XPATH, "*//button[text()='Войти']")#кнопка войти
     PERSONAL_ACCOUNT = (By.XPATH, "*//p[text()='Личный Кабинет']")#личный кабинет
@@ -17,6 +16,11 @@ class StellaLocator:
     SAUCES_BUTTON = (By.XPATH, "*//span[text()='Соусы']")#кнопка соусы
     BUNS_BUTTON = (By.XPATH, "*//span[text()='Булки']")#кнопка булки
     FILLINGS_BUTTON = (By.XPATH, "*//span[text()='Начинки']")#кнопка начинки
-    SECTION_BUNS = (By.XPATH, "*//div/h2[text()='Булки']")
-    SECTION_SAUCES = (By.XPATH, "*//div/h2[text()='Соусы']")
-    SECTION_FILLINGS = (By.XPATH, "*//h2[text()='Начинки']")
+    SECTION_BUNS = (By.XPATH, "*//div/h2[text()='Булки']")#раздел булки
+    SECTION_SAUCES = (By.XPATH, "*//div/h2[text()='Соусы']")#раздел соусы
+    SECTION_FILLINGS = (By.XPATH, "*//h2[text()='Начинки']")#раздел начинки
+    INCORRECT_PASSWORD = (By.XPATH, "*//p[text()='Некорректный пароль']")#ошибка некорректный пароль
+    MAKE_BURGER = (By.XPATH, "*//h1[text()='Соберите бургер']")# текст "Соберите бургер", раздел конструктор
+    CHECKOUT_BUTTON = (By.XPATH, "*//button[text()='Оформить заказ']")#кнопка оформить заказ
+    PROFILE_BUTTON = (By.XPATH, "*//a[@href='/account/profile']")#кнопкп профиль
+    LOGIN_TEXT = (By.XPATH, "*//h2[text()='Вход']")#текст вход
