@@ -24,3 +24,4 @@ class StellaLocator:
     CHECKOUT_BUTTON = (By.XPATH, "*//button[text()='Оформить заказ']")#кнопка оформить заказ
     PROFILE_BUTTON = (By.XPATH, "*//a[@href='/account/profile']")#кнопкп профиль
     LOGIN_TEXT = (By.XPATH, "*//h2[text()='Вход']")#текст вход
+    REGISTRATION_TEXT = (By.XPATH, "*//h2[text()='Регистрация']")#текст регистрация
