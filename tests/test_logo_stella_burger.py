@@ -1,7 +1,7 @@
 from locators import StellaLocator
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.common.by import By
+
 
 class TestLogoStellaBurger:
     def test_logo(self, driver):
